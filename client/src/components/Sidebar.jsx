@@ -36,9 +36,9 @@ function Sidebar({ isMenuOpen, setIsMenuOpen }) {
     return (
         <div className={`flex flex-col h-screen min-w-72 p-5 dark:bg-linear-to-b from-[#242124]/30 to-[#000000]/30 border-r border-[#80609f]/30 backdrop-blur-3xl transition-all duration-500 max-md:absolute left-0 z-1 ${!isMenuOpen && 'max-md:-translate-x-full'}`}>
             {/* Logo */}
-            <img className='w-full max-w-48' src={theme === 'dark' ? assets.logo_full : assets.logo_full_dark} alt="" />
+            <img className='w-full max-w-48' src={theme === 'dark' ? assets.logo_white : assets.logo_dark} alt="" />
             {/* new chat button */}
-            <button onClick={createNewChat} className='flex justify-center items-center w-full py-2 mt-10 text-white bg-linear-to-r from-[#a456f7] to-[#3d81f6] text-sm rounded-md cursor-pointer'>
+            <button onClick={createNewChat} className='flex justify-center items-center w-full py-2 mt-10 text-white bg-linear-to-r from-[#6d91fe] to-[#2948ff] text-sm rounded-md cursor-pointer'>
                 <span className='mr-2 text-xl'>+</span>New Chat
             </button>
 

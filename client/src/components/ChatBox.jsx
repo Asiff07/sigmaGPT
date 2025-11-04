@@ -69,7 +69,7 @@ function ChatBox() {
             <div ref={containerRef} className='flex-1 mb-5 overflow-y-scroll'>
                 {messages.length === 0 && (
                     <div className='h-full flex flex-col items-center justify-center gap-2 text-primary'>
-                        <img src={theme === 'dark' ? assets.logo_full : assets.logo_full_dark} alt="" className='w-full max-w-56 sm:max-w-68' />
+                        <img src={theme === 'dark' ? assets.logo_white : assets.logo_dark} alt="" className='w-full max-w-56 sm:max-w-68' />
                         <p className='mt-5 text-4xl sm:text-6xl text-center text-gray-400 dark:text-white'>Ask Me Anything.</p>
                     </div>
                 )}
@@ -103,7 +103,7 @@ function ChatBox() {
                 </select>
                 <input onChange={(e) => setPrompt(e.target.value)} value={prompt} className='flex-1 w-full text-sm outline-none' type="text" placeholder='Type your prompt here...' required />
                 <button disabled={loading}>
-                    <img className='w-8 cursor-pointer' src={loading ? assets.stop_icon : assets.send_icon} alt="" />
+                    <img className='w-8 cursor-pointer' src={loading ? assets.pause : assets.send} alt="" />
                 </button>
             </form>
         </div>
