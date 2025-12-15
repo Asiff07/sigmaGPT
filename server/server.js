@@ -9,6 +9,7 @@ import creditRouter from './routes/creditRoutes.js';
 import { stripeWebhooks } from './controllers/webhooks.js';
 
 const app = express();
+app.set('trust proxy', 1);
 await connectDB();
 
 //Stripe Webhook Endpoint
